@@ -132,6 +132,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0;
 }
 
 .livros__disponiveis p {
@@ -151,6 +152,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0;
 }
 
 .rodape p {
@@ -224,17 +226,18 @@ body {
 
   /* BOTÕES */
   .nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 12px;
     height: auto;
     margin: 24px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
   }
 
   .nav li {
-    flex: 1 1 calc(50% - 12px);
-    min-width: 0;
+    width: 100%;
+    flex: none;
   }
 
   .btn {
@@ -320,6 +323,7 @@ body {
     min-height: 64px;
     padding: 16px;
     box-sizing: border-box;
+    margin-bottom: 0;
   }
 
   .livros__disponiveis p {
@@ -332,6 +336,7 @@ body {
     height: 80px;
     padding: 12px;
     box-sizing: border-box;
+    margin-top: 0;
   }
 
   .rodape p {

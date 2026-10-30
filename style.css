@@ -10,6 +10,8 @@
   --text-tag-color: #9c9c9c;
 }
 
+/* CONFIGURAÇÕES GERAIS */
+
 body {
   font-family: 'Poppins';
 }
@@ -19,6 +21,8 @@ body {
   margin: 0 auto;
 }
 
+/* CABEÇALHO */
+
 .header {
   text-align: center;
   width: 100%;
@@ -26,12 +30,26 @@ body {
   margin: 15px 15px;
 }
 
+/* BANNER */
+
 .banner {
   background-image: url('/imagens/Banner-1.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 278px;
 }
+
+.banner__imagem {
+  display: block;
+  width: 70%;
+  height: 278px;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  margin-left: 15%;
+}
+
+/* NAVEGAÇÃO E BOTÕES */
 
 .nav {
   display: flex;
@@ -54,13 +72,36 @@ body {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
+
+  /* REMOVER DESTAQUE AZUL DO CLIQUE */
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
+
+/* EFEITO AO PASSAR O MOUSE */
 
 .btn:hover {
   color: #cecdcd;
   border-radius: 10px;
   border-bottom: 2px solid var(--text-description-color);
 }
+
+/* EFEITO AO PRESSIONAR O BOTÃO */
+
+.btn:active {
+  color: #cecdcd;
+  border-radius: 10px;
+  border-bottom: 2px solid var(--text-description-color);
+}
+
+/* REMOVER CONTORNO DE FOCO */
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* GRADE DE LIVROS */
 
 .livros {
   display: flex;
@@ -80,6 +121,8 @@ body {
 .indisponivel {
   opacity: 0.3;
 }
+
+/* INFORMAÇÕES DOS LIVROS */
 
 .livro__titulo {
   color: var(--text-title-color);
@@ -103,6 +146,8 @@ body {
   color: var(--text-price-color);
 }
 
+/* TAGS */
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -122,6 +167,8 @@ body {
   margin-right: 1rem;
 }
 
+/* VALOR DOS LIVROS */
+
 .livros__disponiveis {
   width: 100%;
   height: 80px;
@@ -140,7 +187,9 @@ body {
   font-weight: 500;
   line-height: 24px;
   font-size: 2.5em;
-} 
+}
+
+/* RODAPÉ */
 
 .rodape {
   width: 100%;
@@ -161,7 +210,12 @@ body {
   line-height: 24px;
 }
 
+/* RESPONSIVIDADE - DISPOSITIVOS MÓVEIS */
+
 @media screen and (max-width: 734px) {
+
+  /* CONFIGURAÇÕES GERAIS */
+
   body {
     overflow-x: hidden;
   }
@@ -176,7 +230,8 @@ body {
     box-sizing: border-box;
   }
 
-  /* LOGO CENTRALIZADA */
+  /* CABEÇALHO */
+
   .header {
     width: 100%;
     margin: 0;
@@ -193,25 +248,23 @@ body {
 
   /* BANNER */
 
+  section.banner {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+    overflow: visible;
+  }
 
-   section.banner {
-        width: 100%;
-        height: auto;
-        aspect-ratio: auto;
-        margin: 0;
-        padding: 0;
-        background-image: none;
-        overflow: visible;
-    }
-
-    .banner__imagem {
-        display: block;
-        width: 220%;
-        height: auto;
-        max-width: none;
-        margin-left: -60%;
-    }
-
+  .banner__imagem {
+    display: block;
+    width: 220%;
+    height: auto;
+    max-width: none;
+    margin-left: -60%;
+  }
 
   .banner__conteudo h2 {
     font-size: 1.8rem;
@@ -225,6 +278,7 @@ body {
   }
 
   /* BOTÕES */
+
   .nav {
     display: flex;
     flex-direction: column;
@@ -255,6 +309,7 @@ body {
   }
 
   /* GRADE DE LIVROS */
+
   .livros {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -303,27 +358,30 @@ body {
     text-align: center;
   }
 
-  .tags {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        gap: 5px;
-    }
+  /* TAGS */
 
-    .tag {
-        margin: 0;
-        text-align: center;
-    }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 5px;
+  }
+
+  .tag {
+    margin: 0;
+    text-align: center;
+  }
 
   /* VALOR DOS LIVROS */
+
   .livros__disponiveis {
-    height: auto;
+    height: 85px;
     min-height: 64px;
     padding: 16px;
     box-sizing: border-box;
-    margin-bottom: 0;
+    margin-bottom: -10px;
   }
 
   .livros__disponiveis p {
@@ -332,14 +390,22 @@ body {
   }
 
   /* RODAPÉ */
+
   .rodape {
-    height: 80px;
+    height: 85px;
     padding: 12px;
     box-sizing: border-box;
-    margin-top: 0;
+    margin-top: 10px;
   }
 
   .rodape p {
     font-size: 0.85rem;
+  }
+
+  /* EVITAR ROLAGEM HORIZONTAL */
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
   }
 }

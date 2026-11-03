@@ -5,7 +5,7 @@ Este projeto consiste em uma página responsiva da Alura Books, desenvolvida com
 </p>
 
 <p align="center">
-  <img height="400px" src="./img/github-img/AluraBooks2.png"><br>
+  <img height="400px" src="./imagens/github-img/AluraBooks2.png"><br>
 </p>
 
 ### ⚙ Tecnologias Utilizadas
